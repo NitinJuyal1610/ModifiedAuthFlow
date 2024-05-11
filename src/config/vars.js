@@ -1,9 +1,9 @@
 import path from 'path';
 import dotenvSafe from 'dotenv-safe';
 
-const { pathname: __dirname } = new URL('.', import.meta.url);
-
-dotenvSafe.config();
+dotenvSafe.config({
+  path: path.join(process.cwd(), '/.env'),
+});
 
 export const env = process.env.NODE_ENV;
 export const port = process.env.PORT;
