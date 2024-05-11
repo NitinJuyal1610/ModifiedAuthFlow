@@ -1,9 +1,7 @@
 import path from 'path';
-import dotenvSafe from 'dotenv-safe';
+import dotenv from 'dotenv';
 
-dotenvSafe.config({
-  path: path.join(process.cwd(), '/.env'),
-});
+dotenv.config({ path: path.join(process.cwd(), '/.env') });
 
 export const env = process.env.NODE_ENV;
 export const port = process.env.PORT;
