@@ -1,0 +1,65 @@
+{
+  "name": "nitinjuyal",
+  "version": "1.2.2",
+  "description": "nitinjuyal",
+  "main": "src/index.js",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=8",
+    "yarn": "*"
+  },
+  "scripts": {
+    "precommit": "eslint --fix ./src/",
+    "start": "cross-env NODE_ENV=production pm2 start ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "lint": "eslint . --ext .js,.jsx ./src/",
+    "lint:fix": "yarn lint --fix",
+    "lint:watch": "yarn lint --watch",
+    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.yml up"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcryptjs": "2.4.3",
+    "body-parser": "^1.17.0",
+    "cloudinary": "^2.2.0",
+    "compression": "^1.6.2",
+    "cors": "^2.8.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "dotenv-safe": "^9.1.0",
+    "express": "^4.15.2",
+    "express-validation": "^4.1.0",
+    "helmet": "^7.1.0",
+    "http-status": "^1.0.1",
+    "joi": "^17.13.1",
+    "jwt-simple": "0.5.6",
+    "lodash": "^4.17.4",
+    "method-override": "^3.0.0",
+    "moment-timezone": "^0.5.13",
+    "mongoose": "^8.3.4",
+    "morgan": "^1.8.1",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "4.0.1",
+    "pm2": "^5.1.0",
+    "util": "^0.12.5",
+    "uuid": "^9.0.1",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "eslint": "^9.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^9.0.11",
+    "nodemon": "^3.1.0",
+    "nyc": "^15.1.0"
+  }
+}
