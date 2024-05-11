@@ -22,3 +22,9 @@ Swagger documentation is available to explore and test the API endpoints interac
 
 1. Start the server as mentioned in the previous section.
 2. Open your web browser and navigate to `https://documenter.getpostman.com/view/21567688/2sA3JM8hRo`.
+
+
+## Admin Creds -
+
+email - `admin@gmail.com`
+password - `Nitin@123`
