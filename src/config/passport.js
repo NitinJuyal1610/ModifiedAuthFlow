@@ -36,7 +36,7 @@ const google = new GoogleStrategy(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.SITE_URL || '/v1/auth/google/callback',
+    callbackURL: process.env.SITE_URL + '/v1/auth/google/callback',
   },
   async function (accessToken, refreshToken, profile, cb) {
     const user = await User.oAuthLogin({
