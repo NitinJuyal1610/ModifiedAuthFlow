@@ -13,7 +13,7 @@ router.post('/login', validate(login), controller.login);
 
 router.post('/logout', authorize(), controller.logout);
 
-router.route('/google').get(oAuthLogin('google'), controller.oAuth);
+router.route('/google').get(oAuthLogin('google'));
 
 router.get(
   '/google/callback',
@@ -21,9 +21,7 @@ router.get(
     failureRedirect: '/login',
     session: false,
   }),
-  (req, res) => {
-    res.send('Logged In Successfully');
-  },
+  controller.oAuth,
 );
 
 export default router;
